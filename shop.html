@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Twin Starzz</title>
+    <link rel="icon" type="image/x-icon" href="Assets/images/LogoRounded.png">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.5.1/jquery.min.js" integrity="sha512-bLT0Qm9VnAYZDflyKcBaQ2gg0hSYNQrJ8RilYldYQ1FxQYoCLtUjuuRuZo+fjqhx/qtq/1itJ0C2ejDxltZVFg==" crossorigin="anonymous"></script>
+    <script src="Assets/js/title2.js"></script>
+    <link href="Assets/css/styles.css" rel="stylesheet">
+    <link href="Assets/css/particles.css" media="screen" rel="stylesheet">
+    <link href="Assets/css/Nav.css" rel="stylesheet">
+    <link rel="stylesheet" type="text/css" href="https://univevip.github.io/cdnjs.cloudflare.com/ajax/libs/animate.css/3.5.2/animate.min.css" />
+    <style>
+        body {
+            cursor: url('Assets/images/custom-cursor.cur'), auto;
+        }
+
+        a, button, input, textarea {
+            cursor: url('Assets/images/custom-cursor.cur'), auto;
+        }
+#sigmabutton {
+    position: fixed;
+    bottom: 10px;
+    left: 10px;
+    font-size: 18px;
+    font-weight: bold;
+    color: cyan;
+    text-decoration: none;
+    transition: color 0.3s;
+}
+#sigmabutton2 {
+    position: fixed;
+    bottom: 10px;
+    left: 140px;
+    font-size: 18px;
+    font-weight: bold;
+    color: cyan;
+    text-decoration: none;
+    transition: color 0.3s;
+}
+#sigmabutton3 {
+    position: fixed;
+    bottom: 10px;
+    left: 225px;
+    font-size: 18px;
+    font-weight: bold;
+    color: cyan;
+    text-decoration: none;
+    transition: color 0.3s;
+}
+
+    </style>
+</head>
+<body>
+    <header>
+        <a href="#" class="logo">Twin Starzz</a>
+        <nav>
+            <a href="index.html" class="active">Home</a>
+            <a href="shop.html" class="active">Shop</a>
+        </nav>
+    </header>
+        <nav>
+        </nav>
+
+    <div class="center">
+        <h1>Shop</h1>
+        <p1><span class="auto-type"></span></p1>
+    </div>
+
+    <audio id="welcome-sound" src="Assets/sounds/fr186u.mp3" preload="auto" loop></audio>
+
+    <script src="https://unpkg.com/typed.js@2.1.0/dist/typed.umd.js"></script>
+    <div id="particles-js"></div>
+    <script src="Assets/js/particles.js"></script>
+    <script src="Assets/js/app.js"></script>
+
+    <script>
+        var audio = document.getElementById('welcome-sound');
+        audio.volume = 0.2;
+
+        var typed = new Typed(".auto-type", {
+            strings: ["Twin Starzz", "333"],
+            typeSpeed: 85,
+            backSpeed: 85,
+            backDelay: 700,
+            smartBackspace: true,
+            loop: true,
+        });
+
+        function toggleAudio(event) {
+            if (event.target.tagName === 'BUTTON' || event.target.tagName === 'A') {
+                return;
+            }
+            if (audio.paused) {
+                audio.play().catch(function(error) {
+                    console.log('🤓🤓🤓:', error);
+                });
+            } else {
+                audio.pause();
+            }
+        }
+
+	document.addEventListener('click', toggleAudio);
+	});
+	</script>
+</body>
+</html>
